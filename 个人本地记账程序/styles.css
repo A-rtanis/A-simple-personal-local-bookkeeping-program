@@ -1,0 +1,58 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6fa;color:#2c3e50;line-height:1.6}
+#app{max-width:960px;margin:0 auto;padding:16px}
+header{text-align:center;margin-bottom:20px}
+header h1{font-size:24px;margin-bottom:8px}
+.tabs{display:flex;gap:0;justify-content:center;background:#e8eaf0;border-radius:10px;padding:4px;max-width:380px;margin:0 auto}
+.tabs .tab{padding:8px 20px;border:none;border-radius:8px;background:transparent;cursor:pointer;font-size:14px;font-weight:500;color:#555;transition:all .2s;flex:1}
+.tabs .tab.active{background:#fff;color:#1a73e8;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.tabs .tab:hover:not(.active){color:#333}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.filter-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.filter-bar label{font-size:14px;display:flex;align-items:center;gap:4px}
+.filter-bar select{padding:6px 10px;border:1px solid #d0d5dd;border-radius:6px;font-size:14px;background:#fff;cursor:pointer}
+.filter-bar select:focus{outline:none;border-color:#1a73e8;box-shadow:0 0 0 2px rgba(26,115,232,.15)}
+.btn{padding:7px 16px;border:1px solid #d0d5dd;border-radius:6px;background:#fff;cursor:pointer;font-size:13px;color:#333}
+.btn:hover{border-color:#b0b5be;background:#f8f9fa}
+.btn.primary{background:#1a73e8;color:#fff;border-color:#1a73e8;font-weight:500}
+.btn.primary:hover{background:#1765cc}
+.btn.danger{color:#e74c3c;border-color:#f5c6cb}
+.btn.danger:hover{background:#fdf2f2}
+.btn.small{padding:4px 10px;font-size:12px}
+.btn.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
+.stats-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.card{background:#fff;border-radius:10px;padding:14px 16px;box-shadow:0 1px 3px rgba(0,0,0,.08);text-align:center}
+.card .label{display:block;font-size:12px;color:#888;margin-bottom:4px}
+.card .value{display:block;font-size:22px;font-weight:700}
+.card.income .value{color:#27ae60}
+.card.expense .value{color:#e74c3c}
+.card.balance .value{color:#2c3e50}
+.table-wrap{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:#f8f9fa;padding:10px 12px;text-align:left;font-weight:600;color:#555;border-bottom:2px solid #e8eaf0;white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid #f0f1f4;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f8f9fa}
+.status-pending{color:#e67e22;font-size:12px;padding:2px 8px;background:#fef3e7;border-radius:4px;display:inline-block}
+.status-done{color:#27ae60;font-size:12px;padding:2px 8px;background:#eafaf1;border-radius:4px;display:inline-block}
+.type-income{color:#27ae60}
+.type-expense{color:#e74c3c}
+.empty-msg{text-align:center;color:#999;padding:40px 0;font-size:14px}
+.chart-controls{display:flex;gap:8px;margin-bottom:12px}
+.chart-container{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+canvas{width:100%;height:250px;display:block}
+#category-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.cat-item{background:#fff;border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.cat-item .cat-name{font-weight:500}
+.cat-item .cat-type{font-size:11px;padding:1px 8px;border-radius:4px;margin-left:8px}
+.cat-item .cat-type.expense{color:#e74c3c;background:#fef0ef}
+.cat-item .cat-type.income{color:#27ae60;background:#eafaf1}
+.cat-item .cat-actions{display:flex;gap:4px}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;z-index:100}
+.modal{background:#fff;border-radius:12px;padding:24px;width:92%;max-width:440px;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.modal h2{margin-bottom:16px;font-size:18px}
+.modal label{display:block;margin-bottom:12px;font-size:13px;color:#555}
+.modal label input,.modal label select,.modal label textarea{display:block;width:100%;margin-top:4px;padding:7px 10px;border:1px solid #d0d5dd;border-radius:6px;font-size:14px;font-family:inherit}
+.modal label input:focus,.modal label select:focus,.modal label textarea:focus{outline:none;border-color:#1a73e8;box-shadow:0 0 0 2px rgba(26,115,232,.15)}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
